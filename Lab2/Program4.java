@@ -33,9 +33,10 @@ public class Program4 {
         //Calculating the average
         averageScore = averageScore/3;
 
-
+        //Outputing the average
         System.out.println("Average: " + averageScore);
 
+        //Closing scanner
         checkInput.close();
         
     }

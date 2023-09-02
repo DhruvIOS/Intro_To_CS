@@ -9,11 +9,9 @@ public class Program5{
 
 
         //Declaring the second number var
-
         int secondNum = 0;
 
         //Decalring the scanner 
-
         Scanner checkInput = new Scanner(System.in);
 
 
@@ -28,11 +26,7 @@ public class Program5{
                 firstNum = checkInput.nextInt();
             }else{
                 //if the i is = 2 it will set the firstNum to what ever user inputs second
-
-
                 secondNum = checkInput.nextInt();
-
-
             }
 
             
@@ -58,6 +52,8 @@ public class Program5{
 
 
         checkInput.close();
+
+
 
     }
 }

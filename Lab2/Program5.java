@@ -49,8 +49,9 @@ public class Program5{
 
         //Outputing the remainder
         System.out.println("Remainder: "+ (firstNum % secondNum) );
+        
 
-
+        //Closing the scanner
         checkInput.close();
 
 

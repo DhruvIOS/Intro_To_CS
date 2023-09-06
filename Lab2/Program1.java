@@ -23,14 +23,15 @@ public class Program1{
 
 
         //Multiplying sales tax and price tax
-        double total = salesTax * itemPrice;
+        double total = itemPrice * salesTax;
+        double totalPrice = total + itemPrice;
 
 
 
         //Outputing
         System.out.println("Item price: " + itemPrice);
         System.out.println("+ Sales Tax: " + salesTax);
-        System.out.println("Total: " + total);
+        System.out.println("Total: " + totalPrice);
         
 
         //closing the scanner

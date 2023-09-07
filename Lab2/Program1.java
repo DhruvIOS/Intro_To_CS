@@ -22,7 +22,7 @@ public class Program1{
         double salesTax = checkInput.nextDouble();
 
 
-        //Multiplying sales tax and price tax
+        //Multiplying sales tax and price tax than adding it to the subtotal
         double total = itemPrice * salesTax;
         double totalPrice = total + itemPrice;
 

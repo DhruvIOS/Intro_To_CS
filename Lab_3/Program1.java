@@ -154,14 +154,10 @@ class Program1 {
     System.out.println("You are in "+ goodStanding);
     
     
-   
-      
+     
       
     checkInput.close();
     
-
-
-
 
     
   }

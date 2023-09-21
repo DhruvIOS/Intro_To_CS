@@ -1,6 +1,6 @@
 
 //Importing scanner
-import java.net.SocketPermission;
+
 import java.util.Scanner;
 
 public class Program1 {
@@ -86,9 +86,9 @@ public class Program1 {
 
             System.out.println("Please enter the 2nd student First name and letter grade");
             System.out.print("For example \"Elon A\" : ");
-            String FiveStudentNameInput = checkInput.next().toLowerCase();
+            String FiveStudentNameInput = checkInput.next();
 
-            String FiveStudentLetterInput = checkInput.next().toLowerCase();
+            String FiveStudentLetterInput = checkInput.next();
 
             studentName[4] = FiveStudentNameInput;
             letterGrade[4] = FiveStudentLetterInput;
@@ -96,24 +96,18 @@ public class Program1 {
 
         }
 
-        // for(String element: studentName){
-        // System.out.println(element);
-        // }
 
-        // for(String element: letterGrade){
-        // System.out.println(element);
-        // }
 
-        // name = "Mary";
-        // age = 25;
-        // gender = "Female";
-        // System.out.printf("%-15s", name);
-        // System.out.printf("%4d", age);
-        // System.out.printf("%17s%n", gender);
+        System.out.println(" ");
+        System.out.printf("%-10s %-4s\n", "Name", "Grade");
+        System.out.println("---------------------");
+        for (int i = 0; i < studentName.length; i++) {
+            String name = studentName[i];
+            String letter = letterGrade[i];
 
-        for (int i = 0; i < records; i++) {
-            System.out.printf("%d | %d\n", studentName[i], letterGrade[i]);
-          }
+            // Print data as a table row
+            System.out.printf("%-10s %-4s\n", name, letter);
+        }
         
 
         checkInput.close();

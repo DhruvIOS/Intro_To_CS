@@ -32,9 +32,9 @@ public class Program1 {
         System.out.println("Please enter the 1st student First name and letter grade");
         System.out.print("For example \"Elon A\" : ");
 
-        String FirstStudentNameInput = checkInput.next().toLowerCase();
+        String FirstStudentNameInput = checkInput.next();
 
-        String FirstStudentLetterInput = checkInput.next().toLowerCase();
+        String FirstStudentLetterInput = checkInput.next();
 
         studentName[0] = FirstStudentNameInput;
         letterGrade[0] = FirstStudentLetterInput;
@@ -44,9 +44,9 @@ public class Program1 {
 
             System.out.println("Please enter the 2nd student First name and letter grade");
             System.out.print("For example \"Elon A\" : ");
-            String SecondStudentNameInput = checkInput.next().toLowerCase();
+            String SecondStudentNameInput = checkInput.next();
 
-            String SecondStudentLetterInput = checkInput.next().toLowerCase();
+            String SecondStudentLetterInput = checkInput.next();
 
             studentName[1] = SecondStudentNameInput;
             letterGrade[1] = SecondStudentLetterInput;
@@ -58,9 +58,9 @@ public class Program1 {
 
             System.out.println("Please enter the 2nd student First name and letter grade");
             System.out.print("For example \"Elon A\" : ");
-            String ThirdStudentNameInput = checkInput.next().toLowerCase();
+            String ThirdStudentNameInput = checkInput.next();
 
-            String ThirdStudentLetterInput = checkInput.next().toLowerCase();
+            String ThirdStudentLetterInput = checkInput.next();
 
             studentName[2] = ThirdStudentNameInput;
             letterGrade[2] = ThirdStudentLetterInput;
@@ -72,9 +72,9 @@ public class Program1 {
 
             System.out.println("Please enter the 2nd student First name and letter grade");
             System.out.print("For example \"Elon A\" : ");
-            String FourStudentNameInput = checkInput.next().toLowerCase();
+            String FourStudentNameInput = checkInput.next();
 
-            String FourStudentLetterInput = checkInput.next().toLowerCase();
+            String FourStudentLetterInput = checkInput.next();
 
             studentName[3] = FourStudentNameInput;
             letterGrade[3] = FourStudentLetterInput;

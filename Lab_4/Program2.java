@@ -45,7 +45,7 @@ public class Program2 {
             }
 
             if(UD == 3){
-                row2[LR] = "x";
+                row3[LR] = "x";
 
             }
 

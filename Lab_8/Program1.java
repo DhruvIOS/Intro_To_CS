@@ -12,6 +12,8 @@ public class Program1{
             System.out.println("---------------------------");
             System.out.println("[0] To quit");
             System.out.println("[1] Method1");
+            System.out.print("[2] Input Validate: ");
+            
 
 
 
@@ -39,6 +41,16 @@ public class Program1{
                     userInput.close();
                     runWhile = false;
 
+                case 2:
+
+                    Scanner userInput2 = new Scanner(System.in);
+                   
+                    String age = Method1(userInput2, "What is your age? ");
+                    System.out.println("Your name is " + age);
+                    
+                    runWhile = false;
+
+
 
             }
         }
@@ -60,10 +72,27 @@ public class Program1{
 
 
 
-    public static Boolean Method2(){
+    public static int inputValidate(Scanner checkInput, String prompt){
+
+        
+
+        System.out.print(prompt);
+
+        while(!checkInput.hasNextInt()){
+            System.out.println("Please input a valid number");
+        }
+
+        int age = checkInput.nextInt();
+
+        if(age <= 0 || age > 100){
+            System.out.println("Please enter a age higher than 0 and less than 0");
+        }
 
 
-        return true;
+        return age;
+
+
+       
     }
 }
 

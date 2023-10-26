@@ -1,9 +1,10 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
-public class Program1{
+public class Program1 {
     public static void main(String[] args) {
 
-                Scanner checkInput = new Scanner(System.in);
+        Scanner checkInput = new Scanner(System.in);
 
         boolean runWhile = true;
 
@@ -12,8 +13,7 @@ public class Program1{
             System.out.println("---------------------------");
             System.out.println("[0] To quit");
             System.out.println("[1] Method1");
-
-
+            System.out.print("[2] Input Validate: ");
 
             if (!checkInput.hasNextInt()) {
                 System.out.println("Please enter a vaild number between \"1-4\" ");
@@ -39,33 +39,56 @@ public class Program1{
                     userInput.close();
                     runWhile = false;
 
+                case 2:
+
+                    Scanner userInput2 = new Scanner(System.in);
+                    int outputAge = inputValidate(userInput2, "What is your age? ");
+                    System.out.println("You entered " + outputAge);
+                    userInput2.close();
+                    runWhile = false;
 
             }
         }
 
     }
 
-
-
-    public static String Method1(Scanner checkInput, String prompt){
+    public static String Method1(Scanner checkInput, String prompt) {
 
         System.out.print(prompt);
 
         String output = checkInput.nextLine();
 
         return output;
-        
 
     }
 
+    public static int inputValidate(Scanner checkInput, String prompt) {
 
+        boolean runWhile = true;
 
-    public static Boolean Method2(){
+        int age = 1;
 
+        while (runWhile == true) {
 
-        return true;
+            System.out.print(prompt);
+
+            while (!checkInput.hasNextInt()) {
+                System.out.println("Please enter a vaild number");
+
+                checkInput.nextLine();
+
+            }
+
+            age = checkInput.nextInt();
+
+            if (age <= 0 || age > 100) {
+                System.out.println("Age between 1 and 100");
+            }
+
+            runWhile = false;
+
+        }
+
+        return age;
     }
 }
-
-
-    

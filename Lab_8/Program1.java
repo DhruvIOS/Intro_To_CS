@@ -1,4 +1,4 @@
-import java.util.InputMismatchException;
+
 import java.util.Scanner;
 
 public class Program1 {
@@ -34,39 +34,48 @@ public class Program1 {
                 case 1:
 
                     Scanner userInput = new Scanner(System.in);
-                    String output = Method1(userInput, "What is your name? ");
+                    String output = Name(userInput, "What is your name? ");
                     System.out.println("Your name is " + output);
                     userInput.close();
                     runWhile = false;
+                    break;
 
                 case 2:
 
                     Scanner userInput2 = new Scanner(System.in);
+
                     int outputAge = inputValidate(userInput2, "What is your age? ");
                     System.out.println("You entered " + outputAge);
                     userInput2.close();
                     runWhile = false;
+                    break;
 
             }
         }
 
     }
 
-    public static String Method1(Scanner checkInput, String prompt) {
 
+   
+    public static String Name(Scanner userInput, String prompt){
         System.out.print(prompt);
 
-        String output = checkInput.nextLine();
+        String output = userInput.nextLine();
 
         return output;
 
-    }
+
+
+   }
 
     public static int inputValidate(Scanner checkInput, String prompt) {
 
+
         boolean runWhile = true;
 
-        int age = 1;
+        int age = 0;
+
+        int agereturned = 0;
 
         while (runWhile == true) {
 
@@ -83,12 +92,17 @@ public class Program1 {
 
             if (age <= 0 || age > 100) {
                 System.out.println("Age between 1 and 100");
-            }
+                checkInput.nextLine();
 
-            runWhile = false;
+            } else {
+                agereturned = age;
+                runWhile = false;
+
+            }
 
         }
 
-        return age;
+        return agereturned;
+
     }
 }

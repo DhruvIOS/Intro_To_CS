@@ -34,14 +34,17 @@ class Program1 {
                 case 1:
                     Problem1();
                     runWhile = false;
+                    break;
 
                 case 2:
                     Problem2();
                     runWhile = false;
+                    break;
 
                 case 3:
                     Problem3();
                     runWhile = false;
+                    break;
 
                 
 

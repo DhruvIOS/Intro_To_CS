@@ -8,6 +8,8 @@ public class Client {
         System.out.println("Description: " + creature.getDescription());
         System.out.println("Endurance: " + creature.getEndurance());
 
+        String fileName = creature.getFileName();
+
         System.out.println("Phrases:");
         for (int i = 0; i < 3; i++) {
             System.out.println("- " + creature.getPhrase());
@@ -35,7 +37,9 @@ public class Client {
 
         System.out.print("Enter a new name: ");
         creature.setName(scanner.nextLine());;
-        creature.saveToFile("creature.dat");
+        creature.saveAsToFile("creature.dat");
+
+        creature.saveAsToFile(fileName);
 
         Creature newCreature = new Creature("creature.dat");
         System.out.println(newCreature.toString());

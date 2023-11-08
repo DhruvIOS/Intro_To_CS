@@ -36,15 +36,15 @@ public class Creature {
 
     public void saveToFile() {
         try {
-            FileWriter writer = new FileWriter(filename);
-            writer.write(name + "\n");
-            writer.write(description + "\n");
-            writer.write(endurance + "\n");
-            writer.write(phrases.length + "\n");
+            PrintStream writer = new PrintStream(filename);
+            writer.println(name);
+            writer.println(description);
+            writer.println(endurance );
+            writer.println(phrases.length );
             for (String phrase : phrases) {
-                writer.write(phrase + "\n");
+                writer.println(phrase );
             }
-            writer.write(lastPhraseUsedIndex + "\n");
+            writer.println(lastPhraseUsedIndex + "\n");
             writer.close();
             System.out.println("Creature saved to file.");
         } catch (IOException e) {
@@ -52,7 +52,7 @@ public class Creature {
         }
     }
 
-    public void saveToFile(String newFilename) {
+    public void saveAsToFile(String newFilename) {
         filename = newFilename;
         saveToFile();
     }
@@ -85,6 +85,10 @@ public class Creature {
 
     public String getDescription() {
         return description;
+    }
+
+    public String getFileName(){
+        return filename;
     }
 
     public int getEndurance() {
@@ -125,7 +129,7 @@ public class Creature {
         lastPhraseUsedIndex = index;
     }
 
-    @Override
+    
     public String toString() {
         StringBuilder sb = new StringBuilder();
         sb.append("Name: ").append(name).append("\n");
